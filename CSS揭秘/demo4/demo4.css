@@ -1,0 +1,14 @@
+body{
+    background: #eeeeee;
+}
+
+.bgOrigin {
+    color: white;
+    width: 500px;
+    height: 500px;
+    background: url("./demo4.jpg") no-repeat #58a 100% 100%;
+    padding: 10px;
+    border: 10px solid hsla(0, 0%, 100%, 5);
+    background-origin: border-box;
+    background-position:calc(100% - 20px) calc(100% - 10px);
+}
