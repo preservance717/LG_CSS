@@ -1,0 +1,23 @@
+.main{
+    width: 200px;
+    height: 300px;
+    border:1px solid #eeeeee;
+    display:flex;
+}
+
+/*.main div{*/
+    /*flex: 1;*/
+/*}*/
+
+.red {
+    background: red;
+    flex: 10px;
+}
+
+.green{
+    background: green;
+}
+
+.yellow{
+    background: yellow;
+}
