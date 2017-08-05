@@ -24,4 +24,22 @@ body{
     position: absolute;
     top: 116px;
 }
+.container{
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    width: 600px;
+    height: 500px;
+    border: 1px solid #000;
+    margin: auto;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: #0ff;
+}
 
