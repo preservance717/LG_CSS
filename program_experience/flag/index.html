@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <title>DirectX Demo -- 国旗</title>
+    <style>
+        span
+        {
+            margin-right: 10px;
+        }
+
+        #imgFlag
+        {
+            filter: progid:DXImageTransform.Microsoft.Wave(freq=2,LightStrength=15,Phase=0,Strength=4)
+                    progid:DXImageTransform.Microsoft.BasicImage(rotation=3)
+                    progid:DXImageTransform.Microsoft.Blur(PixelRadius=1);
+        }
+    </style>
+</head>
+<body>
+<!--[if !IE]><!-->
+请用IE浏览器预览...
+<style>#imgFlag{display: none}</style>
+<!--<![endif]-->
+
+<img id="imgFlag" src="//ku.shouce.ren/files/images/201601/56a335b02097a.png" />
+<hr />
+
+<p>
+    <span>国旗:</span>
+    <select id="selFlag">
+        <option value="CN">中国</option>
+        <option value="US">美国</option>
+        <option value="UK">英国</option>
+        <option value="FR">法国</option>
+    </select>
+</p>
+<p>
+    <span>消除锯齿:</span>
+    <input type="checkbox" id="chkBlur" checked="checked" />
+</p>
+<script>
+    var fltWav = imgFlag.filters[0];
+    var fltBlur = imgFlag.filters[2];
+    var i = 0;
+    setInterval(function()
+    {
+        fltWav.Phase = i % 100;
+        i += 3;
+    }, 1);
+
+
+    selFlag.onchange = function()
+    {
+        var opt = this.options[this.selectedIndex];
+        imgFlag.src = opt.value + ".png";
+    };
+
+
+    chkBlur.onclick = function()
+    {
+        fltBlur.enabled = this.checked;
+    };
+</script>
+</body>
+</html>
