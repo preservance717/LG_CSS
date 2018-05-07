@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        p:nth-child(-n+1){
+            background: #666;
+            color:#fff;
+        }
+        .colorful:nth-child(4){
+            color:red;
+        }
+        p:nth-child(2){
+            color:green;
+        }
+        .colorful:nth-of-type(4){
+            color:blue;
+        }
+        /*p:nth-of-type(4){*/
+            /*color:blue;*/
+        /*}*/
+    </style>
+</head>
+<body>
+<p>this is a paragraph.</p>
+<p>this is a paragraph.</p>
+<span>test</span>
+<p class="colorful">this is a paragraph.</p>
+<p class="colorful">this is a paragraph.</p>
+<p>this is a paragraph.</p>
+</body>
+</html>
