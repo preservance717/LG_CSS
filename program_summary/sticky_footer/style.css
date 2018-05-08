@@ -1,0 +1,38 @@
+/*固定高度*/
+.header{
+  background: #6f0096;
+  height: 60px;
+}
+
+.content{
+  background: #e8e8e8;
+  min-height: calc(100vh-60px-60px);
+}
+
+.footer{
+  background: #000000;
+  color:#ffffff;
+  height: 60px;
+}
+
+/* flexbox 布局方式*/
+/* body{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  text-align: center;
+  margin: 0px;
+}
+.header{
+  background: #6f0096;
+}
+
+.content{
+  background: #e8e8e8;
+  flex:1;
+}
+
+.footer{
+  background: #000000;
+  color:#ffffff;
+} */
