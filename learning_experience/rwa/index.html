@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Responsive web app</title>
+    <style media="screen">
+      .header{
+        text-align: center;
+        background: #329998;
+      }
+      .grid{
+        display: flex;
+        justify-content: center;
+        background: red;
+        height: 500px;
+      }
+      .item1{
+        width: 100%;
+        background: green;
+      }
+      .item2{
+        width: 100%;
+      }
+      @media (min-width: 1024px) {
+        .icon{
+          display: none;
+        }
+      }
+      @media (max-width: 1024px) {
+        .icon{
+          display: inline;
+        }
+        .item1{
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <span class="icon">按钮</span>
+      <span>rwa</span>
+    </div>
+    <div class="grid">
+      <div class="item1">
+        1
+      </div>
+      <div class="item2">
+        2
+      </div>
+    </div>
+  </body>
+</html>

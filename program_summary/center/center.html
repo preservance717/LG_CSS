@@ -2,9 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>center</title>
+    <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
 </head>
 <body>
-$END$
+<div>
+    <button style="height: 500px">adfsdfsdf</button>
+    <button style="height: 500px">adfsdfsdf</button>
+<div>
+    <button style="height: 500px">adfsdfsdf</button>
+</div>
+    <div>
+        <button style="height: 500px">adfsdfsdf</button>
+    </div>
+    <div style="height: 500px" id="test">adfsdfsdf</div>
+</div>
+<script>
+    window.onscroll = function () {
+        let subtractValue = $("#test").offset().top - $(window).scrollTop();
+        console.log(subtractValue);
+    }
+</script>
 </body>
 </html>
