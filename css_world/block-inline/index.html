@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>block-inline</title>
+    <style>
+        .counter-box > .counter {
+            counter-reset: wangxiaoer 2;
+            counter-increment: wangxiaoer;
+
+            font-size: 32px;
+            font-family: Arial Black;
+            color: #cd0000;
+        }
+
+        .counter-box > .counter:before {
+            content: counter(wangxiaoer);
+            counter-increment: wangxiaoer;
+        }
+
+        .dot-box > dot {
+            display: inline-block;
+            height: 1em;
+            line-height: 1;
+            text-align: left;
+            vertical-align: -.25em;
+            overflow: hidden;
+        }
+
+        dot::before {
+            content: '...\A..\A.';
+            display: block;
+            white-space: pre-wrap;
+            animation: dot 3s infinite step-start both;
+        }
+
+        @keyframes dot {
+            33% {
+                transform: translateY(-2em);
+            }
+            66% {
+                transform: translateY(-1em);
+            }
+        }
+
+        .content-box {
+            width: 256px;
+            height: 256px;
+            border-bottom: 1px dashed #cccccc;
+            text-align: justify;
+        }
+
+        .content-box:before {
+            content: '';
+            display: inline-block;
+            height: 100%;
+        }
+
+        .content-box:after {
+            content: '';
+            display: inline-block;
+            width: 100%;
+        }
+
+        .bar {
+            display: inline-block;
+            width: 20px;
+            height: 50px;
+            background: #d5d5d5;
+        }
+
+        .img-alt-box {
+            width: 470px;
+        }
+
+        .img-alt-box img {
+            outline: 1px solid;
+            display: block;
+        }
+
+        /*.img-box {
+            background: url("../images/it.png") no-repeat;
+            width: 200px;
+            height: 200px;
+            border: 1px solid #cd0000;
+            background-size: contain;
+        }*/
+
+        /*.img-box:before {
+            content: url("../images/it.png");
+            display: block;
+            width: 200px;
+            height: 200px;
+        }*/
+
+        .box-min {
+            background: #ffc727;
+        }
+
+        span {
+            display: inline-block;
+        }
+
+        .box-height1 {
+            height: 160px;
+            padding: 30px;
+            background: #beceeb;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .box-height1 .child {
+            width: 100%;
+            height: 100%;
+            background: #cd0000;
+            position: absolute;
+        }
+
+        .box-height {
+            height: 160px;
+            padding: 30px;
+            background: #beceeb;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        .box-height .child {
+            height: 100%;
+            background: #cd0000;
+        }
+
+        .ao, .tu {
+            display: inline-block;
+            width: 0;
+            color: #cd0000;
+            font-size: 14px;
+            line-height: 18px;
+            margin: 35px;
+        }
+
+        .ao:before, .tu:before {
+            outline: 2px solid #cd0000;
+            font-family: Consolas, Monaco, monospace;
+        }
+
+        .ao:before {
+            content: 'love你love';
+        }
+
+        .tu {
+            direction: rtl;
+        }
+
+        .tu:before {
+            content: '我love你';
+        }
+
+        .box-btn1 {
+            width: 200px;
+            text-align: center;
+            color: #FFFFFF;
+            border: 1px solid #cd0000;
+        }
+
+        .content {
+            background: #cd0000;
+            display: inline-block;
+            text-align: left;
+        }
+
+        .box-btn {
+            width: 240px;
+        }
+
+        table {
+            width: 280px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .inline-table {
+            display: inline-table;
+            border: 1px solid #cad5eb;
+            width: 128px;
+            margin-left: 10px;
+        }
+
+        .inline-table > p {
+            display: table-cell;
+        }
+
+        .box {
+            padding: 10px;
+            background-color: #cd0000;
+        }
+
+        .box > img {
+            float: left;
+        }
+
+        .clear:after {
+            content: '';
+            clear: both;
+            display: list-item;
+        }
+        .title-box {
+            background: #f4fbfe;
+            padding: 0 16px;
+            font-size: 15px;
+            color: #333333;
+            text-align: justify;
+            line-height: 15px;
+            width: 100%;
+        }
+        .title-box:after{
+             content: '';
+             display: inline-block;
+             overflow: hidden;
+             width: 100%;
+         }
+        .title-box:before{
+            content: '';
+            display: inline-block;
+            overflow: hidden;
+            width: 100%;
+        }
+        .title-box span{
+            display: inline-block;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="title-box">
+    <span>事故跟踪</span>
+    <span>审核流程</span>
+</div>
+<div class="counter-box">
+    <p>我叫王小二，字如其名，下面要出现的数字是：</p>
+    <p class="counter"></p>
+</div>
+<div class="dot-box">
+    正在加载中
+    <dot>...</dot>
+</div>
+<!--此处不能换行-->
+<div class="content-box"><span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+</div>
+<div class="img-alt-box">
+    <img src="" alt="任意值">
+</div>
+<div class="img-box">
+</div>
+<div class="box-min">
+    <span></span>
+</div>
+<div class="box-height1">
+    <div class="child"></div>
+</div>
+<br>
+<div class="box-height">
+    <div class="child"></div>
+</div>
+
+<div>
+    <span class="ao"></span>
+    <span class="tu"></span>
+</div>
+
+<div class="box-btn1">
+    <div class="content">
+        文字内容文字内容文字内容文字内容
+    </div>
+</div>
+
+<div class="box-btn">
+    <button>按钮</button>
+    <button>文字再多一点</button>
+    <button>按钮文字越多宽度越宽（包裹、内部尺寸特性），但不会超过容器的宽度（自适应性）</button>
+</div>
+
+<table>
+    <tr>
+        <td>就一列就一列就一列就一列</td>
+        <td>当父级relative，且宽度很小的时候，例如...</td>
+        <td>当父级relative，且宽度很小的时候，例如...</td>
+    </tr>
+</table>
+
+<div class="box-text-table">
+    和文字平起平坐的表格
+    <div class="inline-table">
+        <p>第一列</p>
+        <p>第二列</p>
+    </div>
+</div>
+
+<div class="box clear">
+    <img src="../images/it.png" alt="">
+</div>
+</body>
+</html>

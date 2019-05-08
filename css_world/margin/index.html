@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>margin</title>
+    <style>
+        .ul-box{
+            width: 400px;
+            border: 1px solid #cd0000;
+        }
+        .ul-box ul{
+            width: 100%;
+            margin-right: -20px;
+        }
+
+        .ul-box ul> li{
+            list-style: none;
+            float: left;
+            width: 100px;
+            margin-right: 20px;
+            background: #4CAF50;
+        }
+
+        .box{
+            overflow: hidden;
+            /*width: 300px;*/
+        }
+        .full{
+            width: 100%;
+            float: left;
+        }
+        .box > img{
+            float: left;
+            width: 128px;
+            height: 96px;
+            margin-left: -128px;
+        }
+        .full > p{
+            margin-right: 140px;
+        }
+        .box > img{
+            float: right;
+        }
+        .box > p{
+            margin-right: 140px;
+        }
+
+        .father{
+            width: 300px;
+            height: 200px;
+            background: #d5d5d5;
+        }
+        .son{
+            margin: 0 -20px;
+            height: 100px;
+            background: red;
+        }
+        .column-box{
+            overflow: hidden;
+            color: #ffffff;
+            width: 400px;
+            display: flex;
+        }
+        .column-left{
+            background: darkblue;
+        }
+        .column-right{
+            background: darkred;
+        }
+        .column-left, .column-right{
+            margin-bottom: -9999px;
+            padding-bottom: 9999px;
+        }
+        .percent-box{
+            overflow: hidden;
+            background: olive;
+            width: 300px;
+        }
+        .percent-box div{
+            margin: 50%;
+        }
+    </style>
+</head>
+<body>
+<div class="percent-box">
+<div></div>
+</div>
+
+<!--<div class="column-box">
+    <div class="column-left">
+        <h1>正方观点</h1>
+        正方观点正方观点
+    </div>
+    <div class="column-right">
+        <h1>反方观点</h1>
+        <h2>反方观点</h2>
+        <h2>反方观点</h2>
+        <h2>反方观点</h2>
+    </div>
+</div>-->
+
+<!--<div class="ul-box">
+    <ul>
+        <li>列表1</li>
+        <li>列表2</li>
+        <li>列表3</li>
+    </ul>
+</div>-->
+
+<!--<div class="box">
+    <div class="full">
+        <p>
+            文字内容文字内容文字内容文字内容文字内容文字内容
+            文字内容文字内容文字内容文字内容文字内容文字内容
+            文字内容文字内容文字内容文字内容文字内容文字内容
+        </p>
+    </div>
+    <img src="../images/it.png" alt="it.png">
+</div>-->
+
+<!--<div class="box">
+    <img src="../images/it.png" alt="it.png">
+    <p>
+        文字内容文字内容文字内容文字内容文字内容文字内容
+        文字内容文字内容文字内容文字内容文字内容文字内容
+        文字内容文字内容文字内容文字内容文字内容文字内容
+    </p>
+</div>-->
+
+<!--<div class="father">
+    <div class="son"></div>
+</div>-->
+</body>
+</html>
