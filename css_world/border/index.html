@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>border</title>
+</head>
+<style>
+    .icon-menu{
+        width: 20px;
+        height: 120px;
+        border-left: 60px double;
+        border-right: 20px solid;
+        border-color: red;
+    }
+    .dot-box{
+        width: 20px;
+        height: 20px;
+        border: 20px dotted;
+    }
+    .dash-box{
+        width: 420px;
+        height: 120px;
+        border: 20px dashed;
+    }
+    .border-color-box{
+        width: 20px;
+        height: 20px;
+        color: red;
+        border-style: dashed;
+    }
+    .add{
+        color: #cccccc;
+        border: 2px dashed;
+        position: relative;
+    }
+    .add:before {
+        content: '';
+        border-top: 10px solid;
+    }
+    .add:after{
+        content: '';
+        border-left: 10px solid;
+        /*position: absolute;*/
+        /*left: 0;*/
+        /*top: 0;*/
+        transform: rotate(-45deg);
+    }
+    .add:hover{
+        color: red;
+    }
+    .background-box{
+        width: 100px;
+        height: 100px;
+        background: url("../images/it.png") no-repeat;
+        border-right: 50px solid transparent;
+        background-position:100% 50%;
+    }
+    .diagram{
+        width: 0;
+        border-width: 20px 20px;
+        border-style: solid;
+        border-color: red red transparent transparent;
+    }
+    .button,.button1 {
+        display: inline-block;
+        line-height: 36px;
+        padding: 0 40px;
+        color: #fff;
+        background-color: #cd0000;
+        position: relative;
+    }
+    .button1{
+        border-radius: 5px;
+    }
+    .button:before,
+    .button:after {
+        content: "";
+        position: absolute;
+        left: 0; right: 0;
+        border-style: solid;
+    }
+    .button:before {
+        top: -2px;
+        border-width: 0 2px 2px;
+        border-color: transparent transparent #cd0000;
+    }
+    .button:after {
+        bottom: -2px;
+        border-width: 2px 2px 0;
+        border-color: #cc0000 transparent transparent;
+    }
+    .contour-box{
+        border-left: 150px solid #333333;
+        background: #f0f3f9;
+    }
+    .contour-box:after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+    .contour-box nav{
+        float: left;
+        width: 150px;
+        margin-left: -150px;
+    }
+    .nav{
+        line-height: 40px;
+        color: #fff;
+    }
+    .module{
+        line-height: 40px;
+    }
+    .contour-box section{
+        overflow: hidden;
+    }
+</style>
+<body>
+<div class="contour-box">
+    <nav>
+        <h3 class="nav">导航一</h3>
+        <h3 class="nav">导航一</h3>
+        <h3 class="nav">导航一</h3>
+        <h3 class="nav">导航一</h3>
+        <h3 class="nav">导航一</h3>
+        <h3 class="nav">导航一</h3>
+        <h3 class="nav">导航一</h3>
+    </nav>
+    <section>
+        <div class="module">模块一</div>
+        <div class="module">模块一</div>
+        <div class="module">模块一</div>
+        <div class="module">模块一</div>
+    </section>
+</div>
+<!--<a href class="button">我是按钮</a>-->
+<!--<a href class="button1">我是按钮</a>-->
+<!--<div class="diagram"></div>-->
+<!--<div class="background-box"></div>-->
+<!--<div class="add"></div>-->
+<!--<div class="border-color-box"></div>-->
+<!--<div class="dash-box"></div>
+<div class="dot-box"></div>
+<div class="icon-menu">
+</div>-->
+</body>
+</html>
