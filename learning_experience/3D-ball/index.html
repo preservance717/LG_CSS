@@ -1,0 +1,24 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <title>3D ball</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="wrapper"><div class="content" id="ball">
+        
+    </div>
+    <script>
+        window.onload  = function(){
+          let ballEle = document.getElementById('ball');
+          for(let i=0; i<200; i++){
+            let divEle = document.createElement('div');
+            divEle.setAttribute('class', 'element');
+            ballEle.append(divEle);
+          }
+        }
+      </script>
+  </body>
+</html>

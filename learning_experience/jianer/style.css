@@ -1,0 +1,148 @@
+.container {
+  height: 600px;
+  margin: 10% auto;
+}
+.face {
+  position: relative;
+  width: 150px;
+}
+.face::before {
+  position: absolute;
+  content: "";
+  width: 87px;
+  height: 2px;
+  background: #333333;
+  top: -19px;
+  left: -5px;
+  transform: rotateZ(-30deg);
+}
+.face::after {
+  position: absolute;
+  content: "";
+  width: 87px;
+  height: 2px;
+  background: #333333;
+  top: -19px;
+  right: -8px;
+  transform: rotateZ(30deg);
+}
+.eyes {
+  width: 150px;
+  height: 95px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.eye {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #333333;
+  display: inline-block;
+  position: relative;
+}
+
+.eye:first-child {
+  margin-right: 25px;
+}
+
+.eye::before {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #000000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bottom-face {
+  width: 150px;
+  height: 150px;
+  border-radius: 0 0 50% 50%;
+  border: 2px solid #333333;
+  position: absolute;
+  top: 4px;
+  border-top: 0;
+}
+
+.mouth {
+  width: 60px;
+  height: 30px;
+  border-radius: 0 0 50% 50%/ 0 0 100% 100%;
+  border: 2px solid #333333;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
+}
+
+.circles {
+  margin-top: 150px;
+}
+
+.h-circle {
+  width: 100px;
+  height: 200px;
+  border: 1px solid #000000;
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.v-circle {
+  width: 200px;
+  height: 100px;
+  border: 1px solid #000000;
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.quarter-circle {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #000000;
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.left-circle {
+  border-radius: 100% 0 0 100% / 50% 0 0 50%;
+}
+
+.right-circle {
+  border-radius: 0 100% 100% 0 / 0 50% 50% 0;
+}
+
+.top-circle {
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+}
+
+.bottom-circle {
+  border-radius: 0 0 50% 50% / 0 0 100% 100%;
+}
+
+.top-left-quarter-circle {
+  border-radius: 0 0 100% 0 / 0 0 100% 0;
+  /* border-radius: 0 0 100% 0; */
+}
+
+.ellipse-circle {
+  width: 200px;
+  height: 100px;
+  border: 1px solid #000000;
+  margin: 10px;
+  display: inline-block;
+  border-radius: 100%;
+}
+
+.ellipse-circle-1 {
+  width: 200px;
+  height: 50px;
+  border: 1px solid #000000;
+  margin: 10px;
+  display: inline-block;
+  border-radius: 50px;
+}

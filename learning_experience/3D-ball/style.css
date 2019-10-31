@@ -1,0 +1,148 @@
+@keyframes roundandround {
+  to {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+@keyframes show {
+  to {
+    opacity: 1;
+  }
+}
+body {
+  background: #000000;
+}
+.container {
+  width: 600px;
+  height: 600px;
+  margin: 2% auto;
+  perspective: 1000px;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  transform: rotateX(45deg) rotateY(45deg);
+  transform-style: preserve-3d;
+}
+.content {
+  position: relative;
+  width: 70%;
+  height: 70%;
+  margin: 0 auto;
+  transform-style: preserve-3d;
+  animation: roundandroud 7.5s 1.3s infinite linear;
+}
+
+.content .element {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 6px;
+  border-style: dashed;
+  border-radius: 50%;
+  opacity: 0;
+  animation: show 0.75s forwards ease-in-out;
+}
+
+.element:nth-child(1) {
+  color: #8df435;
+  transform: rotateY(4deg);
+  animation-delay: 0s;
+}
+.element:nth-child(2) {
+  color: #a8e526;
+  transform: rotateY(8deg);
+  animation-delay: 0s;
+}
+.element:nth-child(3) {
+  color: #c2d11c;
+  transform: rotateY(12deg);
+  animation-delay: 0s;
+}
+.element:nth-child(4) {
+  color: #c8cb1b;
+  transform: rotateY(16deg);
+  animation-delay: 0s;
+}
+.element:nth-child(5) {
+  color: #deb21a;
+  transform: rotateY(20deg);
+  animation-delay: 0s;
+}
+.element:nth-child(6) {
+  color: #ef9621;
+  transform: rotateY(24deg);
+  animation-delay: 0s;
+}
+.element:nth-child(7) {
+  color: #f29122;
+  transform: rotateY(28deg);
+  animation-delay: 0s;
+}
+.element:nth-child(8) {
+  color: #fb7430;
+  transform: rotateY(32deg);
+  animation-delay: 0s;
+}
+.element:nth-child(9) {
+  color: #fe5944;
+  transform: rotateY(36deg);
+  animation-delay: 0s;
+}
+.element:nth-child(8) {
+  color: #fb7430;
+  transform: rotateY(40deg);
+  animation-delay: 0s;
+}
+.element:nth-child(9) {
+  color: #fe5944;
+  transform: rotateY(44deg);
+  animation-delay: 0s;
+}
+.element:nth-child(10) {
+  color: #a8e526;
+  transform: rotateY(48deg);
+  animation-delay: 0s;
+}
+.element:nth-child(11) {
+  color: #f83d61;
+  transform: rotateY(52deg);
+  animation-delay: 0s;
+}
+.element:nth-child(12) {
+  color: #ec2b7d;
+  transform: rotateY(56deg);
+  animation-delay: 0s;
+}
+.element:nth-child(13) {
+  color: #e82983;
+  transform: rotateY(60deg);
+  animation-delay: 0s;
+}
+.element:nth-child(14) {
+  color: #d41e9f;
+  transform: rotateY(64deg);
+  animation-delay: 0s;
+}
+.element:nth-child(15) {
+  color: #bd1aba;
+  transform: rotateY(68deg);
+  animation-delay: 0s;
+}
+.element:nth-child(16) {
+  color: #b81ac0;
+  transform: rotateY(72deg);
+  animation-delay: 0s;
+}
+.element:nth-child(17) {
+  color: #9c1fd7;
+  transform: rotateY(76deg);
+  animation-delay: 0s;
+}
+.element:nth-child(18) {
+  color: #802aea;
+  transform: rotateY(80deg);
+  animation-delay: 0s;
+}
